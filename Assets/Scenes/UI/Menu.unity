@@ -136,7 +136,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &17545606
 Transform:
   m_ObjectHideFlags: 0
@@ -365,6 +365,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 8523709996072336685, guid: bd8bdcd232e81f74ba6b6d5ce12514fa,
+        type: 3}
+      propertyPath: camShake
+      value: 
+      objectReference: {fileID: 1413035652}
+    - target: {fileID: 8523709996072336685, guid: bd8bdcd232e81f74ba6b6d5ce12514fa,
+        type: 3}
+      propertyPath: hitParticles
+      value: 
+      objectReference: {fileID: 231485082}
     - target: {fileID: 5479358044503951757, guid: bd8bdcd232e81f74ba6b6d5ce12514fa,
         type: 3}
       propertyPath: m_Name
@@ -425,16 +435,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8523709996072336685, guid: bd8bdcd232e81f74ba6b6d5ce12514fa,
-        type: 3}
-      propertyPath: camShake
-      value: 
-      objectReference: {fileID: 1413035652}
-    - target: {fileID: 8523709996072336685, guid: bd8bdcd232e81f74ba6b6d5ce12514fa,
-        type: 3}
-      propertyPath: hitParticles
-      value: 
-      objectReference: {fileID: 231485082}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd8bdcd232e81f74ba6b6d5ce12514fa, type: 3}
 --- !u!4 &387415722 stripped
@@ -11196,7 +11196,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!199 &2091710901
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -12203,7 +12203,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 30
+        scalar: 0
         minScalar: 30
         maxCurve:
           serializedVersion: 2

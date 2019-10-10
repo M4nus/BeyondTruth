@@ -13,6 +13,7 @@ public class Respawn : MonoBehaviour
     public ParticleSystem deathParticles;
     public Animator MinusScore;
     public Timer time;
+    public bool deathParticlesBlockade = false;
 
     private void Start()
     {           
@@ -20,7 +21,7 @@ public class Respawn : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
-    {
+    {                                           
         MinusScore = Minus.GetComponent<Animator>();
         MinusScore.SetBool("LaunchMinus", true);
         time = Timer.GetComponent<Timer>();

@@ -546,6 +546,10 @@ PrefabInstance:
       propertyPath: time
       value: 
       objectReference: {fileID: 2146491515}
+    - target: {fileID: 1693324374, guid: 53033cbb90559f44aaee1d2f3c542757, type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53033cbb90559f44aaee1d2f3c542757, type: 3}
 --- !u!4 &407039457 stripped
