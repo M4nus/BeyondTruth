@@ -8,8 +8,8 @@ public class Option : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        AudioManager.instance.Play("OptionSelect");
         gameObject.SetActive(false);
         portal.SetActive(true);
+        AudioManager.instance.Play("OptionSelect");
     }
 }
