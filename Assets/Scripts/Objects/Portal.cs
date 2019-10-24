@@ -22,7 +22,6 @@ public class Portal : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        AudioManager.instance.Play("Portal");
         if(fader == null)
         {                               
             fader = GameObject.Find("CanvasFader").GetComponentInChildren<Animator>();
@@ -36,6 +35,7 @@ public class Portal : MonoBehaviour
             fader.SetBool("Fade", true);
             StartCoroutine(Fade());
         }
+        AudioManager.instance.Play("Portal");
     }
 
     IEnumerator Fade()
