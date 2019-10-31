@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public CameraShake camShake;
+	//For shaking MainCamera when player hits ground or screen border
+	[Header("Objects")]
+	public CameraShake camShake;
 
+	
     [SerializeField]
     GameObject _player;
     Rigidbody2D _rb;
@@ -15,6 +18,8 @@ public class PlayerMovement : MonoBehaviour
     public float jumpForce = 100f;
     public bool grounded = true;
     public ParticleSystem hitParticles;
+
+	
 
     void Start()
     {
