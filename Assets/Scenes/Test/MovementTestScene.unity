@@ -314,7 +314,17 @@ PrefabInstance:
     - target: {fileID: 8523709996072336684, guid: bd8bdcd232e81f74ba6b6d5ce12514fa,
         type: 3}
       propertyPath: m_GravityScale
-      value: 10
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8523709996072336684, guid: bd8bdcd232e81f74ba6b6d5ce12514fa,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8523709996072336684, guid: bd8bdcd232e81f74ba6b6d5ce12514fa,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8523709996072336685, guid: bd8bdcd232e81f74ba6b6d5ce12514fa,
         type: 3}
@@ -329,6 +339,26 @@ PrefabInstance:
     - target: {fileID: 8523709996072336685, guid: bd8bdcd232e81f74ba6b6d5ce12514fa,
         type: 3}
       propertyPath: grounded
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8523709996072336685, guid: bd8bdcd232e81f74ba6b6d5ce12514fa,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8523709996072336685, guid: bd8bdcd232e81f74ba6b6d5ce12514fa,
+        type: 3}
+      propertyPath: hitParticles
+      value: 
+      objectReference: {fileID: 861003037}
+    - target: {fileID: 8523709996072334034, guid: bd8bdcd232e81f74ba6b6d5ce12514fa,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8523709996072334034, guid: bd8bdcd232e81f74ba6b6d5ce12514fa,
+        type: 3}
+      propertyPath: m_FlipY
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -607,6 +637,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64474b70c6406c047ae80489074b89e7, type: 3}
+--- !u!198 &861003037 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4644856079911511697, guid: bd8bdcd232e81f74ba6b6d5ce12514fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 387415721}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1090495953
 GameObject:
   m_ObjectHideFlags: 0
@@ -1134,6 +1170,32 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 318b342e95dca8e43b894f8acf5627dd, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9fde3f52f63074f42bca0766d1d1b9ef, type: 3}
+--- !u!1 &1655623903 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8523709996072336686, guid: bd8bdcd232e81f74ba6b6d5ce12514fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 387415721}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1655623908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655623903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30dd7e4559fec8e439ed11395b58483d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camShake: {fileID: 1292484853}
+  player: {fileID: 1655623903}
+  hitParticles: {fileID: 861003037}
+  playerSpeed: 190
+  jumpVelocity: 25
+  fallMultiplier: 10
+  lowJumpMultiplier: 5
+  isOnGround: 0
 --- !u!1 &1745949336
 GameObject:
   m_ObjectHideFlags: 0
