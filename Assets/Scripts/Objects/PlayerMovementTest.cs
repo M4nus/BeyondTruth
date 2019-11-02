@@ -11,14 +11,14 @@ public class PlayerMovementTest : MonoBehaviour
 	public ParticleSystem hitParticles;
 
 	[Header("Options:")]
-	[Range(0f, 400f)]
-	public float playerSpeed = 250f;
-	[Range(0, 50f)]
-	public float jumpVelocity = 6f;
+	[Range(0f, 300f)]
+	public float playerSpeed = 150f;
+	[Range(0, 1000f)]
+	public float jumpVelocity = 650f;
 	[Range(0, 10f)]
-	public float fallMultiplier = 2.5f;
-	[Range(0, 10f)]
-	public float lowJumpMultiplier = 2f;
+	public float fallMultiplier = 3f;
+	[Range(0, 25f)]
+	public float lowJumpMultiplier = 15f;
 	[HideInInspector]
 	public bool isOnGround = true;
 
@@ -32,27 +32,26 @@ public class PlayerMovementTest : MonoBehaviour
     void Update()
     {
 		float _dirX = Input.GetAxisRaw("Horizontal") * playerSpeed * Time.deltaTime * 10f;
-		float _dirY = Input.GetAxisRaw("Vertical") * jumpVelocity * Time.deltaTime * 50f;
-		
 		_rigBody.velocity = new Vector2(_dirX, _rigBody.velocity.y);
-		if (/*Input.GetButton("Jump") && */Input.GetAxis("Vertical") != 0 && isOnGround == true)
+    }
+
+	void FixedUpdate()
+	{
+		if (Input.GetButtonDown("Jump") && isOnGround == true)
 		{
-			_rigBody.velocity = new Vector2(_rigBody.velocity.x, Mathf.Abs(_dirY));
-			//_rigBody.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jumpVelocity), ForceMode2D.Impulse);
+			_rigBody.AddForce(new Vector2(0f, jumpVelocity * 5f));
 			isOnGround = false;
 		}
-				
+		
 		if (_rigBody.velocity.y < 0f)
 		{
-			_rigBody.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.fixedDeltaTime * 2;
+			_rigBody.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.fixedDeltaTime;
 		}
-		else if (_rigBody.velocity.y > 0f && !Input.GetButton("Jump"))
+		if (_rigBody.velocity.y > 0f && !Input.GetButton("Jump") && isOnGround == false)
 		{
 			_rigBody.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.fixedDeltaTime;
 		}
-
-		
-    }
+	}
 
 	void OnCollisionEnter2D(Collision2D collision) 
 	{

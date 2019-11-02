@@ -314,7 +314,7 @@ PrefabInstance:
     - target: {fileID: 8523709996072336684, guid: bd8bdcd232e81f74ba6b6d5ce12514fa,
         type: 3}
       propertyPath: m_GravityScale
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8523709996072336684, guid: bd8bdcd232e81f74ba6b6d5ce12514fa,
         type: 3}
@@ -1191,10 +1191,10 @@ MonoBehaviour:
   camShake: {fileID: 1292484853}
   player: {fileID: 1655623903}
   hitParticles: {fileID: 861003037}
-  playerSpeed: 190
-  jumpVelocity: 25
-  fallMultiplier: 10
-  lowJumpMultiplier: 5
+  playerSpeed: 150
+  jumpVelocity: 650
+  fallMultiplier: 3
+  lowJumpMultiplier: 15
   isOnGround: 0
 --- !u!1 &1745949336
 GameObject:
