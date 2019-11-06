@@ -5,7 +5,8 @@ using UnityEngine;
 public class Respawn : MonoBehaviour
 {
     [SerializeField]
-    private Transform respawnPoint;
+    private Transform _respawnPoint;
+    
     public GameObject particleEmitter;
     public GameObject Minus;
     public GameObject Timer;
@@ -34,7 +35,7 @@ public class Respawn : MonoBehaviour
             deathParticles.transform.position = collision.transform.position;
             deathParticles.Emit(10);  
         }
-        collision.gameObject.transform.position = respawnPoint.position;
+        collision.gameObject.transform.position = _respawnPoint.position;
         AudioManager.instance.Play("Zip");
         StartCoroutine(WaitForMinus());
     }

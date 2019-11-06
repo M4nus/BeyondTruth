@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class AppearingPlatform : MonoBehaviour
 {
-    Animator anim;
+    private Animator _anim;
 
     void Start()
     {
-        anim = GetComponent<Animator>();       
+        _anim = GetComponent<Animator>();       
     }   
 
     void OnCollisionEnter2D(Collision2D collision)
     {                      
-        anim.SetBool("animate", true);
+        _anim.SetBool("animate", true);
     }              
 }
