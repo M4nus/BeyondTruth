@@ -10,8 +10,8 @@ public class PlayerMovement : MonoBehaviour
 
 	
     [SerializeField]
-    GameObject _player;
-    Rigidbody2D _rb;
+    private GameObject _player;
+    private Rigidbody2D _rb;
 
     [Range(0, 2000)]
     public float playerSpeed = 100f;

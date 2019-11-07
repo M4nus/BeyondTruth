@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class LiePlatform : MonoBehaviour
 {
-    Animator anim;
+    private Animator _anim;
 
     void Start()
     {
-        anim = GetComponent<Animator>();       
+        _anim = GetComponent<Animator>();       
     }   
 
     void OnTriggerEnter2D(Collider2D collision)
     {                      
-        anim.SetBool("animate", true);
+        _anim.SetBool("animate", true);
     }              
 }

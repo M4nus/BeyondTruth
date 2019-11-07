@@ -8,20 +8,20 @@ using UnityEngine.SceneManagement;
 public class Timer : MonoBehaviour
 {
     public float time;
-    private TextMeshProUGUI timer;
+    private TextMeshProUGUI _timer;
     public float currentTime;
                                                       
     void Start()
     {
-        timer = GetComponent<TextMeshProUGUI>();
-        timer.text = "" + time;
+        _timer = GetComponent<TextMeshProUGUI>();
+        _timer.text = "" + time;
         currentTime = time;
     }
                                         
     void Update()
     {                                     
         currentTime -= Time.deltaTime;
-        timer.text = "" + Mathf.Ceil(currentTime);
+        _timer.text = "" + Mathf.Ceil(currentTime);
         TimeOut();
     }
 
