@@ -256,15 +256,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1948321084}
     m_Modifications:
-    - target: {fileID: -2228008445139616192, guid: bd8bdcd232e81f74ba6b6d5ce12514fa,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8523709996072336686, guid: bd8bdcd232e81f74ba6b6d5ce12514fa,
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: -2228008445139616192, guid: bd8bdcd232e81f74ba6b6d5ce12514fa,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8523709997212592775, guid: bd8bdcd232e81f74ba6b6d5ce12514fa,
         type: 3}
@@ -279,7 +279,7 @@ PrefabInstance:
     - target: {fileID: 8523709997212592775, guid: bd8bdcd232e81f74ba6b6d5ce12514fa,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8523709997212592775, guid: bd8bdcd232e81f74ba6b6d5ce12514fa,
         type: 3}
