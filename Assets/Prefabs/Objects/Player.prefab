@@ -9577,6 +9577,7 @@ GameObject:
   - component: {fileID: 8523709996072334035}
   - component: {fileID: 8523709996072336684}
   - component: {fileID: 8523709996072336685}
+  - component: {fileID: -2228008445139616192}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -9703,14 +9704,33 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8523709996072336686}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e63faa777804d94ab1ed32c2b7a69d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   camShake: {fileID: 0}
-  _player: {fileID: 8523709996072336686}
+  _rb: {fileID: 0}
   playerSpeed: 2000
   jumpForce: 700
   grounded: 0
   hitParticles: {fileID: 0}
+--- !u!114 &-2228008445139616192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8523709996072336686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30dd7e4559fec8e439ed11395b58483d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camShake: {fileID: 0}
+  hitParticles: {fileID: 0}
+  playerSpeed: 150
+  jumpVelocity: 650
+  fallMultiplier: 3
+  lowJumpMultiplier: 15
+  isOnGround: 1

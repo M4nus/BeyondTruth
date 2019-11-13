@@ -10,7 +10,6 @@ public class PlayerMovement : MonoBehaviour
 
 	
     [SerializeField]
-    private GameObject _player;
     private Rigidbody2D _rb;
 
     [Range(0, 2000)]
@@ -23,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        _rb = _player.GetComponent<Rigidbody2D>();
+        _rb = this.gameObject.GetComponent<Rigidbody2D>();
         camShake = GameObject.FindObjectOfType<Camera>().GetComponent<CameraShake>();
     }
                                       
