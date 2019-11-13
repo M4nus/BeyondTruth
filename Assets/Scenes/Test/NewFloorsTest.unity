@@ -138,8 +138,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30dd7e4559fec8e439ed11395b58483d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camShake: {fileID: 1852463065}
-  player: {fileID: 62690008}
   hitParticles: {fileID: 1778238616}
   playerSpeed: 150
   jumpVelocity: 114
@@ -258,6 +256,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1948321084}
     m_Modifications:
+    - target: {fileID: -2228008445139616192, guid: bd8bdcd232e81f74ba6b6d5ce12514fa,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8523709996072336686, guid: bd8bdcd232e81f74ba6b6d5ce12514fa,
         type: 3}
       propertyPath: m_Name
@@ -346,7 +349,7 @@ PrefabInstance:
         type: 3}
       propertyPath: camShake
       value: 
-      objectReference: {fileID: 1852463065}
+      objectReference: {fileID: 0}
     - target: {fileID: 8523709996072336685, guid: bd8bdcd232e81f74ba6b6d5ce12514fa,
         type: 3}
       propertyPath: hitParticles
@@ -354,6 +357,7 @@ PrefabInstance:
       objectReference: {fileID: 1778238616}
     m_RemovedComponents:
     - {fileID: 8523709996072336685, guid: bd8bdcd232e81f74ba6b6d5ce12514fa, type: 3}
+    - {fileID: -2228008445139616192, guid: bd8bdcd232e81f74ba6b6d5ce12514fa, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bd8bdcd232e81f74ba6b6d5ce12514fa, type: 3}
 --- !u!4 &387415722 stripped
 Transform:
@@ -624,6 +628,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 498034420}
   m_CullTransparentMesh: 0
+--- !u!1 &651368462 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4665971163373408236, guid: 2dbc5b557fa87b24db695076957b3592,
+    type: 3}
+  m_PrefabInstance: {fileID: 1292484851}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &651368463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651368462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ab8353b5ebd32545867da143199a814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DefaultPosInfluence: {x: 0.15, y: 0.15, z: 0.15}
+  DefaultRotInfluence: {x: 1, y: 1, z: 1}
+  RestPositionOffset: {x: 0, y: 0, z: 0}
+  RestRotationOffset: {x: 0, y: 0, z: 0}
 --- !u!1001 &744676885
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1066,7 +1092,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 112507912181600151, guid: 2dbc5b557fa87b24db695076957b3592, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2dbc5b557fa87b24db695076957b3592, type: 3}
 --- !u!4 &1292484852 stripped
 Transform:
@@ -6226,18 +6253,6 @@ ParticleSystem:
     type: 3}
   m_PrefabInstance: {fileID: 387415721}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1852463065 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 112507912181600151, guid: 2dbc5b557fa87b24db695076957b3592,
-    type: 3}
-  m_PrefabInstance: {fileID: 1292484851}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bef7651d57c5a674bb9602f2e8ad33ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1948321083
 GameObject:
   m_ObjectHideFlags: 0
