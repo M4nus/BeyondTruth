@@ -10,7 +10,7 @@ public class Respawn : MonoBehaviour
     public GameObject particleEmitter;
     public GameObject Minus;
     public GameObject Timer;
-    public CameraShake camShake;
+    public EZCameraShake.CameraShaker camShake;
     public ParticleSystem deathParticles;
     public Animator MinusScore;
     public Timer time;
@@ -18,7 +18,7 @@ public class Respawn : MonoBehaviour
 
     private void Start()
     {           
-        camShake = GameObject.FindObjectOfType<Camera>().GetComponent<CameraShake>();
+        camShake = GameObject.FindObjectOfType<Camera>().GetComponent<EZCameraShake.CameraShaker>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -28,7 +28,7 @@ public class Respawn : MonoBehaviour
         time = Timer.GetComponent<Timer>();
         time.currentTime--;                       
         if(camShake.enabled)
-            StartCoroutine(camShake.Shake(0.5f, 0.3f)); 
+            camShake.ShakeOnce(0.5f, 0.3f, 0.3f, 0.5f); 
         deathParticles = particleEmitter.GetComponent<ParticleSystem>();
         if(particleEmitter.gameObject.active)
         {
