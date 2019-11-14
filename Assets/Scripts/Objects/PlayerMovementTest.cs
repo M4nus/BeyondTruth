@@ -52,10 +52,23 @@ public class PlayerMovementTest : MonoBehaviour
 
 	void OnCollisionEnter2D(Collision2D collision) 
 	{
+        Debug.Log(collision.relativeVelocity.magnitude);
         if (collision.gameObject.layer == LayerMask.NameToLayer("Floor"))
 		{
 		 	isOnGround = true;
-            CameraShaker.Instance.ShakeOnce(5f, 0.1f, 0.2f, 0.2f);
+            if (collision.relativeVelocity.magnitude > 0 && collision.relativeVelocity.magnitude <= 60)
+            {
+                CameraShaker.Instance.ShakeOnce(Random.Range(1.1f, 1.5f), 1f, 0.2f, 0.2f, new Vector2(1, 2), new Vector2(1, 2));
+            }
+            else if (collision.relativeVelocity.magnitude > 60 && collision.relativeVelocity.magnitude <= 80)
+            {
+                CameraShaker.Instance.ShakeOnce(Random.Range(1.6f, 2.1f), 1f, 0.2f, 0.2f, new Vector2(1.2f, 2.2f), new Vector2(1.2f, 2.2f));
+            }
+            else if (collision.relativeVelocity.magnitude > 80)
+            {
+                CameraShaker.Instance.ShakeOnce(Random.Range(2.2f, 2.7f), 1f, 0.2f, 0.2f, new Vector2(1.4f, 2.4f), new Vector2(1.4f, 2.4f));
+            }
+            
         }
         
         hitParticles = GetComponentInChildren<ParticleSystem>();
