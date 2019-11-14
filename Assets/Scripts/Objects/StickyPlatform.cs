@@ -11,7 +11,6 @@ public class StickyPlatform : MonoBehaviour
     {
         _playerRb = collision.gameObject.GetComponent<Rigidbody2D>();
         _playerRb.gravityScale = 0.0f;
-        Debug.Log(_playerRb.gravityScale);
     }
 
 
@@ -20,10 +19,5 @@ public class StickyPlatform : MonoBehaviour
         _playerRb.gravityScale = 10;
         _playerRb = null;
         
-    }
-
-    private void FixedUpdate()
-    {
-        if(_playerRb != null) Debug.Log(_playerRb.gravityScale);
     }
 }
