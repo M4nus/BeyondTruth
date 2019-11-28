@@ -6,7 +6,6 @@ public class JumpPlatform : MonoBehaviour
 {
     private PlayerMovementTest _playerMovement;
 
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         _playerMovement = collision.gameObject.GetComponent<PlayerMovementTest>();

@@ -69,9 +69,10 @@ public class PlayerMovementTest : MonoBehaviour
             }
             
         }
-        
-        hitParticles = GetComponentInChildren<ParticleSystem>();
-        hitParticles.Emit(5); 
+
+        //hitParticles = GetComponentInChildren<ParticleSystem>();
+        //hitParticles.Emit(5);
+        ParticleManager.instance.Play("HitParticles");
 		AudioManager.instance.Play("HitSound");
 	}
 }

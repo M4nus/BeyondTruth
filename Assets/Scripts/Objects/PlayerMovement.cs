@@ -67,9 +67,10 @@ public class PlayerMovement : MonoBehaviour
         if(collision.gameObject.layer == LayerMask.NameToLayer("Floor"))
             grounded = true;
         if(camShake.enabled)
-            StartCoroutine(camShake.Shake(0.1f, 0.2f));    
-        hitParticles = GetComponentInChildren<ParticleSystem>();
-        hitParticles.Emit(5);          
+            StartCoroutine(camShake.Shake(0.1f, 0.2f));
+        //hitParticles = GetComponentInChildren<ParticleSystem>();
+        //hitParticles.Emit(5);  
+        ParticleManager.instance.Play("HitParticles");
         AudioManager.instance.Play("HitSound");
     }
 }
