@@ -10,13 +10,11 @@ public class JumpPlatform : MonoBehaviour
     {
         _playerMovement = collision.gameObject.GetComponent<PlayerMovementTest>();
         _playerMovement.jumpVelocity *= 2;
-        Debug.Log(_playerMovement.jumpVelocity);
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
         _playerMovement.jumpVelocity /= 2;
-        Debug.Log(_playerMovement.jumpVelocity);
         _playerMovement = null;
         
     }
