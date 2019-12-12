@@ -6,7 +6,7 @@ using EZCameraShake;
 public class PlayerMovementTest : MonoBehaviour
 {
 	Rigidbody2D _rigBody;
-	public ParticleSystem hitParticles;
+	//public ParticleSystem hitParticles;
 
 	[Header("Options:")]
 	[Range(0f, 300f)]
@@ -72,7 +72,7 @@ public class PlayerMovementTest : MonoBehaviour
 
         //hitParticles = GetComponentInChildren<ParticleSystem>();
         //hitParticles.Emit(5);
-        ParticleManager.instance.Play("HitParticles");
+        //ParticleManager.instance.Play("HitParticles");
 		AudioManager.instance.Play("HitSound");
 	}
 }

@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     public float playerSpeed = 100f;
     public float jumpForce = 100f;
     public bool grounded = true;
-    public ParticleSystem hitParticles;
+    //public ParticleSystem hitParticles;
 
 	
 
@@ -70,7 +70,7 @@ public class PlayerMovement : MonoBehaviour
             StartCoroutine(camShake.Shake(0.1f, 0.2f));
         //hitParticles = GetComponentInChildren<ParticleSystem>();
         //hitParticles.Emit(5);  
-        ParticleManager.instance.Play("HitParticles");
+        //ParticleManager.instance.Play("HitParticles");
         AudioManager.instance.Play("HitSound");
     }
 }
